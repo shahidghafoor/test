@@ -1,0 +1,35 @@
+db:
+    name: financial
+server:
+    port: 8081
+sp:
+    prefix: FIN_
+spring:
+    datasource:
+        driver-class-name: com.mysql.jdbc.Driver
+        initialize: true
+        password: 7886
+        tomcat:
+            max-active: 50
+            max-idle: 20
+            max-wait: 20000
+            min-idle: 15
+        url: jdbc:mysql://localhost:3307/financial
+        username: root
+    datasource2:
+        driver-class-name: com.mysql.jdbc.Driver
+        initialize: true
+        password: 7886
+        tomcat:
+            max-active: 50
+            max-idle: 20
+            max-wait: 20000
+            min-idle: 15
+        url: jdbc:mysql://localhost:3307/system
+        username: root
+    mvc:
+        servlet:
+            path: /financial
+system:
+    db:
+        name: system
